@@ -28,4 +28,6 @@ public class Doctor : Record
             PatientId = patientIdValue
         }).ToList();
     }
+    
+    public Branch Branch { get; set; }
 }
