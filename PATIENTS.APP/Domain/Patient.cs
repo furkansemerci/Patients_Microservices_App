@@ -15,7 +15,7 @@ public class Patient : Record
     
     public Genders Gender { get; set; }
     
-    public DateTime? BirthDate{ get; set; }
+    public DateTime BirthDate{ get; set; }
     public int? UserId { get; set; }
     
     public List<DoctorPatient> DoctorPatients { get; set; }
