@@ -1,0 +1,7 @@
+namespace PATIENTS.APP.Domain;
+
+public enum Genders
+{
+    Woman,
+    Man
+}
