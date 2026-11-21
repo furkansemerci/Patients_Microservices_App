@@ -50,7 +50,7 @@ namespace PATIENTS.APP.Features.Patients
                 LastName = request.LastName.Trim(),
                 Gender = request.Gender,
                 BirthDate = request.BirthDate.Value,
-                UserID = request.UserId
+                UserId = request.UserId
             };
 
             await DbAddAsync(patientEntity, cancellationToken);
