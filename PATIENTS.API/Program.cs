@@ -11,6 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<DbContext, PatientsDb>(options => options.UseSqlite(
     builder.Configuration.GetConnectionString(nameof(PatientsDb))));
 
+foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+{
+    builder.Services.AddMediatR(
+        config => config.RegisterServicesFromAssemblies(assembly));
+}
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
