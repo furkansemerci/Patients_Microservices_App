@@ -23,7 +23,7 @@ namespace PATIENTS.APP.Features.Doctors
             var doctorEntity = await DbSingleAsync(request.Id, cancellationToken);
             if (doctorEntity is null)
             {
-                Error(0, "Doctor not found");
+                return Error(0, "Doctor not found");
             }
             
             DbRemove(doctorEntity.DoctorPatients);
